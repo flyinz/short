@@ -12,7 +12,7 @@
         --color-primary-alpha: #5c7cfa50;
 
         --body-color: #495057;
-        --body-bg: #f8f9fa;
+        --body-bg: #000000;
 
         --border-color: #dee2e6;
       }
@@ -262,7 +262,7 @@
 
               $nextTick(() => {
                 $refs.url.select()
-                this.alert = { type: 'success', message: `链接 ${document.execCommand('Copy') ? '复制' : 'OK'} ` }
+                this.alert = { type: 'success', message: `链接已 ${document.execCommand('Copy') ? '复制' : 'OK'} ` }
               })
             })
             .catch(e => {
