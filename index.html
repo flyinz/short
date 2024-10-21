@@ -88,7 +88,7 @@
       }
 
       details[open] {
-        background: #000;
+        background: #fff;
       }
 
       details summary {
@@ -203,21 +203,20 @@
     </style>
   </head>
   <body>
-    <header><h1>short</h1></header>
+    <header><h1>Short url</h1></header>
     <main x-data="app" x-cloak>
       <p x-show.transition.opacity="alert" :class="alert?.type" x-text="alert?.message"></p>
-      <input placeholder="输入网址...Enter URL..." x-model="url" x-ref="url" />
+      <input placeholder="输入网址..." x-model="url" x-ref="url" />
       <details>
-        <summary>自定义后缀Custom suffix</summary>
+        <summary>自定义后缀</summary>
         <div>
           <input placeholder="后缀" x-model="后缀" />
           <small> 后缀 默认随机</small>
         </div>
       </details>
-      <button :class="{ loading }" :disabled="loading || isValidated()" @click="submit($refs, $nextTick)">缩短Shorten</button>
+      <button :class="{ loading }" :disabled="loading || isValidated()" @click="submit($refs, $nextTick)">OK</button>
     </main>
-    <footer>
-     
+
     </footer>
     <script src="asset/js/alpine.js"></script>
     <script>
