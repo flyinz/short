@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="asset/img/favicon.png"  >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Short url</title>
+    <title>Short URL</title>
     <style>
       :root {
         --color-primary: #5c7cfa;
@@ -203,15 +203,15 @@
     </style>
   </head>
   <body>
-    <header><h1>Short url</h1></header>
+    <header><h1>Short URL</h1></header>
     <main x-data="app" x-cloak>
       <p x-show.transition.opacity="alert" :class="alert?.type" x-text="alert?.message"></p>
       <input placeholder="输入网址..." x-model="url" x-ref="url" />
       <details>
         <summary>自定义后缀</summary>
         <div>
-          <input placeholder="后缀" x-model="后缀" />
-          <small> 后缀 默认随机</small>
+          <input placeholder="slug" x-model="slug" />
+          <small>默认随机</small>
         </div>
       </details>
       <button :class="{ loading }" :disabled="loading || isValidated()" @click="submit($refs, $nextTick)">OK</button>
