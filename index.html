@@ -203,14 +203,14 @@
     </style>
   </head>
   <body>
-    <header><h1>Short URL</h1></header>
+    <header><h1>URL</h1></header>
     <main x-data="app" x-cloak>
       <p x-show.transition.opacity="alert" :class="alert?.type" x-text="alert?.message"></p>
       <input placeholder="输入网址..." x-model="url" x-ref="url" />
       <details>
         <summary>自定义后缀</summary>
         <div>
-          <input placeholder="slug" x-model="slug" />
+          <input placeholder="字符 ≥2 & ≤10" x-model="slug" />
           <small>默认随机</small>
         </div>
       </details>
@@ -262,7 +262,7 @@
 
               $nextTick(() => {
                 $refs.url.select()
-                this.alert = { type: 'success', message: `链接 ${document.execCommand('Copy') ? '复制' : '缩短'} ` }
+                this.alert = { type: 'success', message: `链接 ${document.execCommand('Copy') ? '复制' : 'OK'} ` }
               })
             })
             .catch(e => {
